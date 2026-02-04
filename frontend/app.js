@@ -1,7 +1,7 @@
 // API URL - automatically switches between local and production
 const API_URL = window.location.hostname === 'localhost'
     ? 'http://localhost:8000'
-    : 'https://url-shortener-production.up.railway.app';  // Update this after Railway deploy
+    : 'https://url-shortener-production-440d.up.railway.app';
 
 // Store recent URLs in memory
 const recentUrls = [];
