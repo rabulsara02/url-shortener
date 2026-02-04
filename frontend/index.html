@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>URL Shortener</h1>
+            <p class="subtitle">Shorten your long URLs instantly</p>
+        </header>
+
+        <!-- Main Form -->
+        <main class="main">
+            <div class="card">
+                <form id="shorten-form" class="form">
+                    <input
+                        type="url"
+                        id="url-input"
+                        class="input"
+                        placeholder="Enter your long URL here..."
+                        required
+                    >
+                    <button type="submit" id="submit-btn" class="btn">
+                        <span class="btn-text">Shorten</span>
+                        <span class="btn-loading hidden">Shortening...</span>
+                    </button>
+                </form>
+
+                <!-- Error Message -->
+                <p id="error-message" class="error hidden"></p>
+
+                <!-- Result Section -->
+                <div id="result" class="result hidden">
+                    <p class="result-label">Your shortened URL:</p>
+                    <div class="result-box">
+                        <a id="short-url" href="#" target="_blank" class="short-url"></a>
+                        <button id="copy-btn" class="copy-btn">Copy</button>
+                    </div>
+                    <p id="copy-message" class="copy-message hidden">Copied to clipboard!</p>
+                    <p class="original-url">
+                        Original: <span id="original-url"></span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Recent URLs Section -->
+            <div id="recent-section" class="card recent-section hidden">
+                <h2 class="recent-title">Recent URLs</h2>
+                <ul id="recent-list" class="recent-list"></ul>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>
+                Built by <a href="https://github.com/rabulsara02" target="_blank">Rahul Bulsara</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
